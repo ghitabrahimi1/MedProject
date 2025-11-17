@@ -102,11 +102,11 @@ export default function Navbar() {
           </div>
 
           {/* Right Side Actions */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             {/* Language Toggle */}
             <button
               onClick={toggleLanguage}
-              className="relative inline-flex items-center justify-center rounded-full border-2 border-white/50 bg-white/40 px-3 sm:px-3.5 py-1.5 sm:py-2 text-xs sm:text-sm font-bold uppercase tracking-wide text-sky-900 transition-all duration-300 hover:border-sky-300 hover:bg-white/70 hover:scale-105 dark:border-white/30 dark:bg-white/20 dark:text-sky-100 dark:hover:bg-white/30 shadow-sm"
+              className="relative inline-flex items-center justify-center rounded-full border-2 border-white/60 bg-white/50 px-2.5 sm:px-3 py-1.5 text-[11px] sm:text-xs font-bold uppercase tracking-wide text-sky-900 transition-all duration-300 hover:border-sky-300 hover:bg-white/80 hover:scale-105 dark:border-white/40 dark:bg-white/30 dark:text-sky-100 dark:hover:bg-white/40 shadow-md z-20"
               aria-label={language === "fr" ? "Switch to English" : "Passer en français"}
             >
               <span className="relative z-10">{language === "fr" ? "EN" : "FR"}</span>
@@ -115,11 +115,11 @@ export default function Navbar() {
             {/* Dark Mode Toggle */}
             <button
               onClick={toggleDarkMode}
-              className="relative flex h-10 w-10 items-center justify-center rounded-full border border-white/30 bg-white/25 text-sky-700 transition-all duration-300 hover:border-sky-300 hover:bg-white/50 dark:border-white/10 dark:bg-white/10 dark:text-sky-100 dark:hover:bg-white/20"
+              className="relative flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-white/30 bg-white/25 text-sky-700 transition-all duration-300 hover:border-sky-300 hover:bg-white/50 dark:border-white/10 dark:bg-white/10 dark:text-sky-100 dark:hover:bg-white/20 z-20"
               aria-label="Basculer le thème"
             >
               <span className="absolute inset-0 rounded-full bg-white/40 blur-xl opacity-40 dark:bg-sky-500/20" />
-              <span className="relative">{isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}</span>
+              <span className="relative">{isDark ? <Sun className="w-4 h-4 sm:w-5 sm:h-5" /> : <Moon className="w-4 h-4 sm:w-5 sm:h-5" />}</span>
             </button>
 
             <Link
@@ -133,11 +133,11 @@ export default function Navbar() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/40 bg-white/20 text-sky-700 transition-all duration-300 hover:border-sky-300 hover:bg-white/40 dark:border-white/10 dark:bg-white/10 dark:text-sky-100 dark:hover:bg-white/20"
+              className="lg:hidden inline-flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-white/40 bg-white/20 text-sky-700 transition-all duration-300 hover:border-sky-300 hover:bg-white/40 dark:border-white/10 dark:bg-white/10 dark:text-sky-100 dark:hover:bg-white/20 z-20"
               aria-label="Ouvrir le menu"
               aria-expanded={isOpen}
             >
-              {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {isOpen ? <X className="w-4 h-4 sm:w-5 sm:h-5" /> : <Menu className="w-4 h-4 sm:w-5 sm:h-5" />}
             </button>
           </div>
         </div>
