@@ -69,8 +69,8 @@ export default function Navbar() {
       <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-sky-200/80 via-cyan-100/55 to-sky-200/45 dark:from-sky-900/60 dark:via-cyan-900/50 dark:to-slate-950/65" />
       <div className="absolute inset-0 pointer-events-none backdrop-blur-xl bg-sky-50/35 dark:bg-slate-950/55 border-b border-white/40 dark:border-white/10 shadow-[0_12px_36px_rgba(56,189,248,0.18)] transition-all duration-500 ease-out" />
 
-      <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-14 sm:h-16">
+      <div className="relative max-w-7xl mx-auto px-2 sm:px-3 md:px-4 lg:px-6 xl:px-8">
+        <div className="flex justify-between items-center h-14 sm:h-16 gap-2">
           <Link href="/" className="flex-shrink-0 group">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 text-primary transition-transform duration-500 ease-out group-hover:scale-110 logo-pulse-glow">
@@ -102,27 +102,29 @@ export default function Navbar() {
           </div>
 
           {/* Right Side Actions */}
-          <div className="flex items-center gap-1.5 sm:gap-2 md:gap-3 flex-shrink-0">
+          <div className="flex items-center gap-1 sm:gap-1.5 md:gap-2 lg:gap-3 flex-shrink-0 min-w-0">
             {/* Language Toggle - Always visible and prominent */}
             <button
               onClick={toggleLanguage}
-              className="relative inline-flex items-center justify-center rounded-full border-2 border-sky-500 bg-white px-2.5 sm:px-3 py-1.5 sm:py-2 min-w-[38px] sm:min-w-[42px] h-8 sm:h-9 text-xs sm:text-sm font-black uppercase tracking-wide text-sky-900 transition-all duration-200 hover:border-sky-600 hover:bg-sky-50 hover:scale-105 active:scale-95 dark:border-sky-400 dark:bg-slate-800 dark:text-sky-100 dark:hover:bg-slate-700 shadow-md hover:shadow-lg z-50"
+              className="relative flex items-center justify-center rounded-full border-2 border-sky-600 bg-white px-2.5 py-1.5 w-9 h-9 sm:w-10 sm:h-10 text-xs font-black uppercase tracking-tight text-sky-900 transition-all duration-200 hover:border-sky-700 hover:bg-sky-50 hover:scale-110 active:scale-95 dark:border-sky-400 dark:bg-slate-800 dark:text-sky-100 dark:hover:bg-slate-700 shadow-lg hover:shadow-xl z-[100] flex-shrink-0"
               aria-label={language === "fr" ? "Switch to English" : "Passer en français"}
               style={{ 
                 WebkitTapHighlightColor: 'transparent',
                 touchAction: 'manipulation',
-                display: 'inline-flex',
-                visibility: 'visible',
-                opacity: 1
+                display: 'flex !important',
+                visibility: 'visible !important',
+                opacity: '1 !important',
+                position: 'relative',
+                zIndex: 100
               }}
             >
-              <span className="relative z-10 font-black leading-none">{language === "fr" ? "EN" : "FR"}</span>
+              <span className="relative z-10 font-black leading-none text-center">{language === "fr" ? "EN" : "FR"}</span>
             </button>
 
             {/* Dark Mode Toggle */}
             <button
               onClick={toggleDarkMode}
-              className="relative flex h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 items-center justify-center rounded-full border border-white/30 bg-white/25 text-sky-700 transition-all duration-300 hover:border-sky-300 hover:bg-white/50 dark:border-white/10 dark:bg-white/10 dark:text-sky-100 dark:hover:bg-white/20 z-20"
+              className="relative flex h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 items-center justify-center rounded-full border border-white/30 bg-white/25 text-sky-700 transition-all duration-300 hover:border-sky-300 hover:bg-white/50 dark:border-white/10 dark:bg-white/10 dark:text-sky-100 dark:hover:bg-white/20 z-20 flex-shrink-0"
               aria-label="Basculer le thème"
             >
               <span className="absolute inset-0 rounded-full bg-white/40 blur-xl opacity-40 dark:bg-sky-500/20" />
@@ -140,7 +142,7 @@ export default function Navbar() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden inline-flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-white/40 bg-white/20 text-sky-700 transition-all duration-300 hover:border-sky-300 hover:bg-white/40 dark:border-white/10 dark:bg-white/10 dark:text-sky-100 dark:hover:bg-white/20 z-20"
+              className="lg:hidden inline-flex h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 items-center justify-center rounded-full border border-white/40 bg-white/20 text-sky-700 transition-all duration-300 hover:border-sky-300 hover:bg-white/40 dark:border-white/10 dark:bg-white/10 dark:text-sky-100 dark:hover:bg-white/20 z-20 flex-shrink-0"
               aria-label="Ouvrir le menu"
               aria-expanded={isOpen}
             >
