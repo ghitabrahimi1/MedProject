@@ -102,24 +102,27 @@ export default function Navbar() {
           </div>
 
           {/* Right Side Actions */}
-          <div className="flex items-center gap-1.5 sm:gap-2 md:gap-3">
-            {/* Language Toggle - Always visible */}
+          <div className="flex items-center gap-1.5 sm:gap-2 md:gap-3 flex-shrink-0">
+            {/* Language Toggle - Always visible and prominent */}
             <button
               onClick={toggleLanguage}
-              className="relative inline-flex items-center justify-center rounded-full border-2 border-sky-400/70 bg-white/60 px-2 sm:px-2.5 py-1.5 min-w-[36px] text-[10px] sm:text-[11px] font-extrabold uppercase tracking-tight text-sky-900 transition-all duration-300 hover:border-sky-500 hover:bg-white/90 hover:scale-110 active:scale-95 dark:border-sky-300/70 dark:bg-white/40 dark:text-sky-100 dark:hover:bg-white/50 shadow-lg z-30"
+              className="relative inline-flex items-center justify-center rounded-full border-2 border-sky-500 bg-white px-2.5 sm:px-3 py-1.5 sm:py-2 min-w-[38px] sm:min-w-[42px] h-8 sm:h-9 text-xs sm:text-sm font-black uppercase tracking-wide text-sky-900 transition-all duration-200 hover:border-sky-600 hover:bg-sky-50 hover:scale-105 active:scale-95 dark:border-sky-400 dark:bg-slate-800 dark:text-sky-100 dark:hover:bg-slate-700 shadow-md hover:shadow-lg z-50"
               aria-label={language === "fr" ? "Switch to English" : "Passer en français"}
               style={{ 
                 WebkitTapHighlightColor: 'transparent',
-                touchAction: 'manipulation'
+                touchAction: 'manipulation',
+                display: 'inline-flex',
+                visibility: 'visible',
+                opacity: 1
               }}
             >
-              <span className="relative z-10 font-black">{language === "fr" ? "EN" : "FR"}</span>
+              <span className="relative z-10 font-black leading-none">{language === "fr" ? "EN" : "FR"}</span>
             </button>
 
             {/* Dark Mode Toggle */}
             <button
               onClick={toggleDarkMode}
-              className="relative flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-white/30 bg-white/25 text-sky-700 transition-all duration-300 hover:border-sky-300 hover:bg-white/50 dark:border-white/10 dark:bg-white/10 dark:text-sky-100 dark:hover:bg-white/20 z-20"
+              className="relative flex h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 items-center justify-center rounded-full border border-white/30 bg-white/25 text-sky-700 transition-all duration-300 hover:border-sky-300 hover:bg-white/50 dark:border-white/10 dark:bg-white/10 dark:text-sky-100 dark:hover:bg-white/20 z-20"
               aria-label="Basculer le thème"
             >
               <span className="absolute inset-0 rounded-full bg-white/40 blur-xl opacity-40 dark:bg-sky-500/20" />
