@@ -69,14 +69,14 @@ export default function Appointment() {
 
   return (
     <>
-      <section id="appointment" className="relative pt-12 md:pt-20 pb-20 md:pb-32">
+      <section id="appointment" className="relative pt-8 sm:pt-10 md:pt-12 lg:pt-20 pb-12 sm:pb-16 md:pb-20 lg:pb-32">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-4 text-center md:text-left animate-fade-up [animation-delay:.02s] mb-8 md:mb-10">
             <span className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-500/15 via-cyan-400/15 to-blue-500/15 px-5 py-2 text-[0.7rem] font-semibold uppercase tracking-[0.48em] text-cyan-400 dark:text-cyan-200">
               Signature Concierge
             </span>
             <div className="inline-flex flex-col items-center md:items-start gap-3">
-              <h2 className="text-4xl md:text-[2.7rem] font-semibold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-sky-700 to-slate-900 dark:from-white dark:via-cyan-200 dark:to-white drop-shadow-[0_18px_45px_rgba(56,189,248,0.18)]">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.7rem] font-semibold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-sky-700 to-slate-900 dark:from-white dark:via-cyan-200 dark:to-white drop-shadow-[0_18px_45px_rgba(56,189,248,0.18)]">
                 {language === "fr" ? "Planifiez votre consultation personnalisée" : "Plan Your Personalized Consultation"}
               </h2>
               <span className="inline-block h-[3px] w-24 rounded-full bg-gradient-to-r from-sky-500 via-cyan-400 to-blue-500 md:w-32" />
@@ -85,12 +85,12 @@ export default function Appointment() {
 
           {/* Form Section */}
           <div id="appointment-form" className="mt-6 md:mt-8 -mb-4 md:-mb-6 scroll-mt-10">
-            <div className="relative rounded-[30px] border border-white/20 bg-white/10 shadow-[0_35px_80px_rgba(15,118,230,0.22)] backdrop-blur-2xl overflow-hidden transition-all duration-500 hover:border-cyan-200/60 animate-fade-up [animation-delay:.08s] font-[family:'Poppins',sans-serif]">
+            <div className="relative rounded-[20px] sm:rounded-[24px] md:rounded-[30px] border border-white/20 bg-white/10 shadow-[0_35px_80px_rgba(15,118,230,0.22)] backdrop-blur-2xl overflow-hidden transition-all duration-500 hover:border-cyan-200/60 animate-fade-up [animation-delay:.08s] font-[family:'Poppins',sans-serif]">
               <div className="pointer-events-none absolute inset-0">
                 <div className="absolute inset-[-120px] bg-[radial-gradient(circle_at_top,#38bdf8_0%,transparent_55%)] opacity-50 blur-3xl" />
                 <div className="absolute inset-[-160px] bg-[radial-gradient(circle_at_bottom,#0ea5e9_0%,transparent_60%)] opacity-40 blur-3xl" />
               </div>
-              <div className="relative border border-white/10 rounded-[30px] bg-white/5 dark:bg-slate-900/40 backdrop-blur-2xl px-6 sm:px-10 md:px-12 py-10 md:py-14">
+              <div className="relative border border-white/10 rounded-[20px] sm:rounded-[24px] md:rounded-[30px] bg-white/5 dark:bg-slate-900/40 backdrop-blur-2xl px-4 sm:px-6 md:px-10 lg:px-12 py-6 sm:py-8 md:py-10 lg:py-14">
                 {submitted ? (
                   <div className="flex flex-col items-center justify-center gap-5 text-center text-slate-900 dark:text-white">
                     <div className="relative flex items-center justify-center h-20 w-20 rounded-full bg-cyan-400/20 shadow-[0_0_30px_rgba(56,189,248,0.45)] animate-fade-up [animation-delay:.1s]">

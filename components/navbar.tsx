@@ -69,8 +69,8 @@ export default function Navbar() {
       <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-sky-200/80 via-cyan-100/55 to-sky-200/45 dark:from-sky-900/60 dark:via-cyan-900/50 dark:to-slate-950/65" />
       <div className="absolute inset-0 pointer-events-none backdrop-blur-xl bg-sky-50/35 dark:bg-slate-950/55 border-b border-white/40 dark:border-white/10 shadow-[0_12px_36px_rgba(56,189,248,0.18)] transition-all duration-500 ease-out" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+      <div className="relative max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-14 sm:h-16">
           <Link href="/" className="flex-shrink-0 group">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 text-primary transition-transform duration-500 ease-out group-hover:scale-110 logo-pulse-glow">
@@ -106,7 +106,7 @@ export default function Navbar() {
             {/* Language Toggle */}
             <button
               onClick={toggleLanguage}
-              className="hidden sm:inline-flex items-center justify-center rounded-full border border-white/40 bg-white/30 px-3 py-1.5 text-xs font-semibold uppercase tracking-wide text-sky-900/80 transition-all duration-300 hover:border-sky-300 hover:bg-white/60 dark:border-white/20 dark:bg-white/10 dark:text-sky-100 dark:hover:bg-white/20"
+              className="inline-flex items-center justify-center rounded-full border border-white/40 bg-white/30 px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-xs font-semibold uppercase tracking-wide text-sky-900/80 transition-all duration-300 hover:border-sky-300 hover:bg-white/60 dark:border-white/20 dark:bg-white/10 dark:text-sky-100 dark:hover:bg-white/20"
             >
               {language === "fr" ? "EN" : "FR"}
             </button>

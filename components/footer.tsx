@@ -32,7 +32,7 @@ export default function Footer() {
 
   return (
     <>
-      <footer className={`relative py-16 md:py-20 overflow-hidden ${
+      <footer className={`relative py-10 sm:py-12 md:py-16 lg:py-20 overflow-hidden ${
         isDark 
           ? "bg-gradient-to-b from-slate-950/50 via-slate-900/30 to-transparent" 
           : "bg-gradient-to-b from-slate-50/80 via-sky-50/60 to-transparent"
@@ -68,7 +68,7 @@ export default function Footer() {
         </div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10 lg:gap-12 mb-8 sm:mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 mb-6 sm:mb-8 md:mb-12">
             {/* Brand Column */}
             <div className="space-y-4">
               <h3 className={`text-xl font-bold ${

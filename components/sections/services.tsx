@@ -405,7 +405,7 @@ export default function Services() {
   )
 
   return (
-    <section id="services" className="relative -mt-10 overflow-hidden py-16 md:-mt-16 md:py-24">
+    <section id="services" className="relative -mt-6 sm:-mt-8 md:-mt-10 overflow-hidden py-12 sm:py-14 md:py-16 lg:-mt-16 lg:py-24">
       <div className="absolute inset-0 -z-20" />
       <div
         className="absolute inset-0 -z-10 pointer-events-none opacity-80 mix-blend-screen"
@@ -418,7 +418,7 @@ export default function Services() {
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-16 text-center">
-          <div className="relative inline-flex items-center justify-center gap-2 rounded-full px-6 py-2.5">
+          <div className="relative inline-flex items-center justify-center gap-2 rounded-full px-4 sm:px-5 md:px-6 py-2 sm:py-2.5">
             <span
               className={`absolute inset-0 rounded-full bg-gradient-to-r ${headerBadgeGlow} blur-[1px] opacity-90`}
             />
@@ -434,7 +434,7 @@ export default function Services() {
           <div className="mt-6 inline-flex flex-col items-center gap-3">
             <span className="h-[2px] w-16 rounded-full bg-gradient-to-r from-sky-500 via-cyan-400 to-transparent shadow-[0_0_18px_rgba(56,189,248,0.45)]" />
             <h2
-              className={`text-center text-4xl md:text-5xl font-semibold leading-tight tracking-tight text-balance ${
+              className={`text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight tracking-tight text-balance px-2 ${
                 isDark ? "text-white drop-shadow-[0_22px_45px_rgba(14,116,205,0.45)]" : "text-slate-900"
               }`}
             >
@@ -446,7 +446,7 @@ export default function Services() {
           </div>
           <div className="mt-6 flex justify-center">
             <p
-              className={`relative inline-block max-w-4xl rounded-2xl border border-sky-300/25 bg-white/12 px-6 py-4 text-sm md:text-lg leading-relaxed shadow-[0_18px_48px_-18px_rgba(56,189,248,0.45)] backdrop-blur-md ${subtitleText} dark:border-sky-300/20 dark:bg-slate-950/35`}
+              className={`relative inline-block max-w-4xl rounded-xl sm:rounded-2xl border border-sky-300/25 bg-white/12 px-4 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed shadow-[0_18px_48px_-18px_rgba(56,189,248,0.45)] backdrop-blur-md ${subtitleText} dark:border-sky-300/20 dark:bg-slate-950/35`}
             >
               <span className="absolute -left-3 top-1/2 h-2 w-2 -translate-y-1/2 rounded-full bg-sky-300 shadow-[0_0_12px_rgba(56,189,248,0.6)]" />
               <span className="absolute -right-3 top-1/2 h-2 w-2 -translate-y-1/2 rounded-full bg-sky-300 shadow-[0_0_12px_rgba(56,189,248,0.6)]" />
@@ -455,7 +455,7 @@ export default function Services() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 sm:gap-8 md:gap-10 md:grid-cols-2 lg:grid-cols-3">
           {servicesConfig.map((service, index) => (
             <ServiceCard
               key={service.id}
@@ -552,7 +552,7 @@ function ServiceCard({ service, language, isDark, index, accentText }: ServiceCa
   )
 
   const buttonClasses =
-    "inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold uppercase tracking-[0.22em] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
+    "inline-flex items-center justify-center gap-2 rounded-full px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] sm:tracking-[0.22em] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
 
   return (
     <Dialog>
@@ -560,7 +560,7 @@ function ServiceCard({ service, language, isDark, index, accentText }: ServiceCa
         ref={assignRefs}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
-        className={`group relative h-full rounded-[28px] border border-sky-200/30 bg-white/70 shadow-[0_25px_65px_-25px_rgba(15,118,230,0.65)] backdrop-blur-xl transition-all duration-500 ease-out dark:border-sky-200/20 dark:bg-slate-900/55 ${
+        className={`group relative h-full rounded-[20px] sm:rounded-[24px] md:rounded-[28px] border border-sky-200/30 bg-white/70 shadow-[0_25px_65px_-25px_rgba(15,118,230,0.65)] backdrop-blur-xl transition-all duration-500 ease-out dark:border-sky-200/20 dark:bg-slate-900/55 ${
           inView ? "translate-y-0 opacity-100 blur-0" : "translate-y-12 opacity-0 blur-[3px]"
         }`}
         style={{
@@ -570,14 +570,14 @@ function ServiceCard({ service, language, isDark, index, accentText }: ServiceCa
           transitionTimingFunction: hovering ? "ease-out" : "cubic-bezier(0.19, 1, 0.22, 1)",
         }}
       >
-        <div className="relative flex h-full flex-col overflow-hidden rounded-[27px] bg-gradient-to-br from-white/95 via-white/80 to-transparent dark:from-slate-950/85 dark:via-slate-950/75 dark:to-slate-950/60">
+        <div className="relative flex h-full flex-col overflow-hidden rounded-[19px] sm:rounded-[23px] md:rounded-[27px] bg-gradient-to-br from-white/95 via-white/80 to-transparent dark:from-slate-950/85 dark:via-slate-950/75 dark:to-slate-950/60">
           <div className={`pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-gradient-to-br ${service.accent}`} />
           <div
             className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
             style={{ backgroundImage: glow }}
           />
 
-          <div className="relative h-60 overflow-hidden">
+          <div className="relative h-48 sm:h-52 md:h-60 overflow-hidden">
             <div
               className={`pointer-events-none absolute -inset-16 opacity-60 blur-3xl transition-all duration-500 group-hover:opacity-90 bg-gradient-to-br ${service.halo}`}
             />
@@ -604,19 +604,19 @@ function ServiceCard({ service, language, isDark, index, accentText }: ServiceCa
             <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent opacity-70 mix-blend-multiply" />
           </div>
 
-          <div className="relative flex flex-1 flex-col justify-between p-6">
-            <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <div className="relative flex h-12 w-12 items-center justify-center rounded-xl bg-white/90 text-sky-600 shadow-[0_10px_25px_rgba(56,189,248,0.38)] transition-transform duration-500 group-hover:scale-110 dark:bg-slate-950/80 dark:text-sky-300">
-                  <Icon className="h-5 w-5 animate-[pulse_3s_ease-in-out_infinite]" />
-                  <div className="absolute inset-0 rounded-xl border border-white/50 dark:border-sky-300/30" />
+          <div className="relative flex flex-1 flex-col justify-between p-4 sm:p-5 md:p-6">
+            <div className="space-y-3 sm:space-y-4">
+              <div className="flex items-center gap-2 sm:gap-3">
+                <div className="relative flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-lg sm:rounded-xl bg-white/90 text-sky-600 shadow-[0_10px_25px_rgba(56,189,248,0.38)] transition-transform duration-500 group-hover:scale-110 dark:bg-slate-950/80 dark:text-sky-300">
+                  <Icon className="h-4 w-4 sm:h-5 sm:w-5 animate-[pulse_3s_ease-in-out_infinite]" />
+                  <div className="absolute inset-0 rounded-lg sm:rounded-xl border border-white/50 dark:border-sky-300/30" />
                 </div>
                 <div>
-                  <h3 className={`text-lg font-semibold text-slate-900 dark:text-white`}>{content.title}</h3>
-                  <p className={`text-xs uppercase tracking-[0.3em] ${accentText}`}>{content.subtitle}</p>
+                  <h3 className={`text-base sm:text-lg font-semibold text-slate-900 dark:text-white`}>{content.title}</h3>
+                  <p className={`text-[10px] sm:text-xs uppercase tracking-[0.25em] sm:tracking-[0.3em] ${accentText}`}>{content.subtitle}</p>
                 </div>
               </div>
-              <p className={`text-sm leading-relaxed ${isDark ? "text-slate-200/85" : "text-slate-600"}`}>
+              <p className={`text-xs sm:text-sm leading-relaxed ${isDark ? "text-slate-200/85" : "text-slate-600"}`}>
                 {content.description}
               </p>
             </div>

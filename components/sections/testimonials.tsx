@@ -62,7 +62,7 @@ export default function Testimonials() {
   ]
 
   return (
-    <section id="testimonials" className="relative py-12 md:py-16 lg:py-20 overflow-hidden bg-transparent">
+    <section id="testimonials" className="relative py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 overflow-hidden bg-transparent">
       {/* Fond avec effets */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div 
@@ -83,7 +83,7 @@ export default function Testimonials() {
         <div className="text-center mb-12 md:mb-16">
           <div className="inline-block mb-3">
             <h2 
-              className={`relative text-3xl md:text-4xl lg:text-5xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r ${
+              className={`relative text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r px-2 ${
                 isDark
                   ? "from-cyan-300 via-blue-300 to-cyan-300"
                   : "from-cyan-600 via-blue-600 to-cyan-600"

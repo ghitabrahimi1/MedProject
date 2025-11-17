@@ -92,7 +92,7 @@ export default function Home() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center py-24 md:py-32 group"
+      className="relative min-h-screen flex items-center py-16 sm:py-20 md:py-24 lg:py-32 group"
     >
       <div className="absolute inset-0 pointer-events-none" />
 
@@ -101,7 +101,7 @@ export default function Home() {
           <div className="absolute -inset-[1px] rounded-[28px] bg-gradient-to-r from-sky-400/35 via-cyan-300/20 to-blue-500/30 opacity-0 group-hover:opacity-100 blur-md transition-opacity duration-500" />
           <div className="relative overflow-hidden rounded-[28px] border border-sky-300/40 bg-white/10 backdrop-blur-lg shadow-[0_18px_45px_rgba(15,118,230,0.18)] transition-all duration-500 hover:border-sky-300/70">
             <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-white/5 to-transparent opacity-60" />
-            <div className="relative flex flex-col lg:flex-row items-stretch gap-10 px-6 sm:px-10 md:px-12 py-10 md:py-14">
+            <div className="relative flex flex-col lg:flex-row items-stretch gap-6 sm:gap-8 md:gap-10 px-4 sm:px-6 md:px-10 lg:px-12 py-6 sm:py-8 md:py-10 lg:py-14">
               <div
                 className="hidden lg:flex flex-1 flex-col justify-center animate-fade-up"
                 style={{ animationDelay: "0.02s" }}
@@ -129,7 +129,7 @@ export default function Home() {
                     </div>
                   </div>
                   <p
-                    className={`text-2xl md:text-3xl font-semibold leading-snug uppercase tracking-[0.15em] text-transparent bg-clip-text drop-shadow-[0_14px_45px_rgba(16,185,129,0.25)] ${heroPhraseHighlight}`}
+                    className={`text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold leading-snug uppercase tracking-[0.1em] sm:tracking-[0.12em] md:tracking-[0.15em] text-transparent bg-clip-text drop-shadow-[0_14px_45px_rgba(16,185,129,0.25)] ${heroPhraseHighlight}`}
                   >
                     L&apos;expérience dentaire haut de gamme qui réenchante votre sourire.
                   </p>
@@ -141,11 +141,11 @@ export default function Home() {
                 <div
                   className={`relative rounded-[26px] ${textPanelBorder} ${
                     isDark ? "text-white" : "text-slate-900"
-                  } backdrop-blur-2xl shadow-[0_20px_55px_rgba(15,118,230,0.22)] px-6 sm:px-7 py-10`}
+                  } backdrop-blur-2xl shadow-[0_20px_55px_rgba(15,118,230,0.22)] px-4 sm:px-6 md:px-7 py-6 sm:py-8 md:py-10`}
                 >
                   <div className="flex flex-col lg:grid lg:grid-cols-[auto,1fr] gap-8">
                     <div className="flex flex-col lg:flex-row items-start gap-6 animate-fade-up" style={{ animationDelay: "0.05s" }}>
-                      <div className="relative w-[220px] h-[220px] overflow-hidden rounded-[32px] border border-sky-200/35 bg-white/20 shadow-[0_10px_24px_rgba(15,118,230,0.18)]">
+                      <div className="relative w-full max-w-[180px] sm:max-w-[200px] md:max-w-[220px] h-[180px] sm:h-[200px] md:h-[220px] mx-auto lg:mx-0 overflow-hidden rounded-[24px] sm:rounded-[28px] md:rounded-[32px] border border-sky-200/35 bg-white/20 shadow-[0_10px_24px_rgba(15,118,230,0.18)]">
                         <Image src="/med1_remove.png" alt={copy.portraitAlt} fill className="object-cover" />
                       </div>
                       <div className="flex flex-col items-start gap-4">
@@ -190,7 +190,7 @@ export default function Home() {
                         </p>
                       </div>
 
-                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 animate-fade-up" style={{ animationDelay: "0.52s" }}>
+                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 animate-fade-up" style={{ animationDelay: "0.52s" }}>
                         <div className={`rounded-2xl px-4 py-5 backdrop-blur flex flex-col items-center gap-3 ${iconCardBorder}`}>
                           <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-sky-500 via-cyan-400 to-blue-600 text-white shadow-[0_0_18px_rgba(56,189,248,0.35)]">
                             <Scan className="w-5 h-5" />
