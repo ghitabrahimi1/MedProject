@@ -102,14 +102,18 @@ export default function Navbar() {
           </div>
 
           {/* Right Side Actions */}
-          <div className="flex items-center gap-2 sm:gap-3">
-            {/* Language Toggle */}
+          <div className="flex items-center gap-1.5 sm:gap-2 md:gap-3">
+            {/* Language Toggle - Always visible */}
             <button
               onClick={toggleLanguage}
-              className="relative inline-flex items-center justify-center rounded-full border-2 border-white/60 bg-white/50 px-2.5 sm:px-3 py-1.5 text-[11px] sm:text-xs font-bold uppercase tracking-wide text-sky-900 transition-all duration-300 hover:border-sky-300 hover:bg-white/80 hover:scale-105 dark:border-white/40 dark:bg-white/30 dark:text-sky-100 dark:hover:bg-white/40 shadow-md z-20"
+              className="relative inline-flex items-center justify-center rounded-full border-2 border-sky-400/70 bg-white/60 px-2 sm:px-2.5 py-1.5 min-w-[36px] text-[10px] sm:text-[11px] font-extrabold uppercase tracking-tight text-sky-900 transition-all duration-300 hover:border-sky-500 hover:bg-white/90 hover:scale-110 active:scale-95 dark:border-sky-300/70 dark:bg-white/40 dark:text-sky-100 dark:hover:bg-white/50 shadow-lg z-30"
               aria-label={language === "fr" ? "Switch to English" : "Passer en français"}
+              style={{ 
+                WebkitTapHighlightColor: 'transparent',
+                touchAction: 'manipulation'
+              }}
             >
-              <span className="relative z-10">{language === "fr" ? "EN" : "FR"}</span>
+              <span className="relative z-10 font-black">{language === "fr" ? "EN" : "FR"}</span>
             </button>
 
             {/* Dark Mode Toggle */}
@@ -156,6 +160,15 @@ export default function Navbar() {
                   {item.label}
                 </Link>
               ))}
+              <button
+                onClick={() => {
+                  toggleLanguage()
+                  setIsOpen(false)
+                }}
+                className="w-full rounded-full bg-white/50 border-2 border-sky-300/50 px-4 py-2 text-sm font-bold uppercase tracking-wide text-sky-900 transition-all duration-300 hover:bg-white/70 dark:bg-white/20 dark:border-sky-400/50 dark:text-sky-100 dark:hover:bg-white/30"
+              >
+                {language === "fr" ? "Switch to English (EN)" : "Passer en Français (FR)"}
+              </button>
               <Link
                 href="#appointment"
                 className="block rounded-full bg-gradient-to-r from-sky-500 via-cyan-400 to-blue-600 px-4 py-2 text-center text-sm font-semibold uppercase tracking-wide text-white shadow-[0_0_20px_rgba(59,130,246,0.45)] transition-all duration-300 hover:shadow-[0_0_28px_rgba(59,130,246,0.7)]"
