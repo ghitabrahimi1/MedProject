@@ -106,9 +106,10 @@ export default function Navbar() {
             {/* Language Toggle */}
             <button
               onClick={toggleLanguage}
-              className="inline-flex items-center justify-center rounded-full border border-white/40 bg-white/30 px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-xs font-semibold uppercase tracking-wide text-sky-900/80 transition-all duration-300 hover:border-sky-300 hover:bg-white/60 dark:border-white/20 dark:bg-white/10 dark:text-sky-100 dark:hover:bg-white/20"
+              className="relative inline-flex items-center justify-center rounded-full border-2 border-white/50 bg-white/40 px-3 sm:px-3.5 py-1.5 sm:py-2 text-xs sm:text-sm font-bold uppercase tracking-wide text-sky-900 transition-all duration-300 hover:border-sky-300 hover:bg-white/70 hover:scale-105 dark:border-white/30 dark:bg-white/20 dark:text-sky-100 dark:hover:bg-white/30 shadow-sm"
+              aria-label={language === "fr" ? "Switch to English" : "Passer en français"}
             >
-              {language === "fr" ? "EN" : "FR"}
+              <span className="relative z-10">{language === "fr" ? "EN" : "FR"}</span>
             </button>
 
             {/* Dark Mode Toggle */}
